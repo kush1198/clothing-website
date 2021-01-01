@@ -1,6 +1,8 @@
 import React from 'react';
 import MenuItem from '../menu-item/menu-item.component';
 
+import './directory.styes.scss'
+
 class Directory extends React.Component{
     constructor(){
         super()
@@ -45,7 +47,7 @@ class Directory extends React.Component{
     render(){
         return (
             <div className="directory-menu">
-            {this.state.sections.map(({title,imageUrl,id,size}) => (<MenuItem title={title} key={id} imageUrl={imageUrl} size={size}/>))}
+            {this.state.sections.map(({title,imageUrl,id,size,linkUrl}) => (<MenuItem title={title} key={id} imageUrl={imageUrl} size={size} linkUrl={linkUrl}/>))}
             </div>
         )
     }
